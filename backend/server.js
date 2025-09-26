@@ -4,11 +4,11 @@ import productRoutes from './routes/product.route.js';
 
 const app = express();
 app.use(express.json());
-
+const PORT = 3001;
 
 app.use('/api/products', productRoutes);
 
-app.listen(process.env.PORT, () => {
+app.listen(PORT, () => {
   connectDB();
-  console.log(`Server is running on http://localhost:${process.env.PORT}`);
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
